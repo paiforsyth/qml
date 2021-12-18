@@ -9,3 +9,4 @@ repos:
     rev: v0.1.0
     hooks:
     -   id: pants-lint
+    -   id: pants-fmt

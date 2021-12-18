@@ -12,21 +12,14 @@ on:
     branches: [ main ]
 
 jobs:
-  org-check:
-    name: Check GitHub Organization
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Noop
-        run: "true"
   build:
     name: Perform CI Checks
-    needs: org-check
     env:
       PANTS_CONFIG_FILES: pants.ci.toml
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.7]
+        python-version: [3.9]
     steps:
     - uses: actions/checkout@v2
     - uses: actions/cache@v2
@@ -47,7 +40,7 @@ jobs:
     - name: Check BUILD files
       run: ./pants tailor --check update-build-files --check
     - name: Lint and typecheck
-      run: | 
+      run: |
         ./pants lint typecheck ::
     - name: Test
       run: |
