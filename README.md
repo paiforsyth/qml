@@ -68,11 +68,17 @@ This will build both a `.whl` bdist and a `.tar.gz` sdist.
 ./pants package helloworld/util:dist
 ```
 
-We can also remove the `setup_py_commands` field from `helloworld/util/BUILD` to have Pants instead generate a 
+We can also remove the `setup_py_commands` field from `helloworld/util/BUILD` to have Pants instead generate a
 `setup.py` file, with all the relevant code in a chroot.
 
 ## Count lines of code
 
 ```
 ./pants count-loc '**/*'
+```
+
+## Update requirements using pur
+
+```
+./pants run qml/tools/run_pur.py
 ```
