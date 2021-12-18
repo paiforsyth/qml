@@ -1,4 +1,9 @@
 ![build_status](https://github.com/paiforsyth/qml/actions/workflows/pants.yaml/badge.svg)
+## Install pre-commit
+```
+pre-commit install
+```
+
 ## List targets
 
 ```
