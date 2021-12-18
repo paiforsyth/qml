@@ -1,12 +1,13 @@
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.3.0
+    rev: v4.0.1
     hooks:
     -   id: check-yaml
     -   id: end-of-file-fixer
     -   id: trailing-whitespace
--   repo: https://github.com/rcuza/pants-pre-commit-hooks
-    rev: v0.1.0
+-   repo: https://github.com/paiforsyth/pants-pre-commit-hooks/ #https://github.com/rcuza/pants-pre-commit-hooks
+    rev: v0.2.0
     hooks:
-    -   id: pants-lint
     -   id: pants-fmt
+    -   id: pants-lint
+    -   id: pants-check
