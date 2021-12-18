@@ -3,8 +3,8 @@
 
 ansicolors==1.1.8
 setuptools>=56.2.0,<57
-types-setuptools>=57.4.4,<58
+types-setuptools>=56.2.0,<58
 pytest==6.2.5
-pur==5.4.2
 pre-commit==2.16.0
+pur==5.4.2
 pyupgrade==2.29.1
