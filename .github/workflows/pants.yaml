@@ -39,6 +39,8 @@ jobs:
         ./pants --version
     - name: Check BUILD files
       run: ./pants tailor --check update-build-files --check
+    - name: Check requirements using pur
+      run: ./pants run qml/tools/run_pur.py --run-args="--check"
     - name: Lint and typecheck
       run: |
         ./pants lint typecheck ::
