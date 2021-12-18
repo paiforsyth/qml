@@ -24,6 +24,7 @@ def test_language_translator() -> None:
 
 def test_unknown_phrase() -> None:
     translator = LanguageTranslator({"hello": {"es": "hola"}})
+    print("In the middle of a test!!!")
     with pytest.raises(UnknownPhrase):
         translator.translate("es", "good morning")
 
