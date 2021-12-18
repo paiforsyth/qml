@@ -1,17 +1,17 @@
 import argparse
+import logging
 import sys
 
 from pur import update_requirements
 
+logger = logging.getLogger(__name__)
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
-    messages = [
-        x[0]["message"]
-        for x in update_requirements(
-            input_file="requirements.txt", dry_run=args.check
-        ).values()
-    ]
-    if len(messages) > 0:
+    result = update_requirements(input_file="requirements.txt", dry_run=args.check)
+    updated = [x for x in result.values() if x[0]["updated"]]
+    num_updated = len(updated)
+    if num_updated > 0:
+        logger.error(f"Stale packages: {updated}")
         sys.exit(1)
