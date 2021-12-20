@@ -1,5 +1,6 @@
 import pytest
 from importlinter_backend.rules import ImportLinterRequest
+from importlinter_backend.rules import  rules as importlinter_rules
 from importlinter_backend.subsystem import ImportLinterFieldSet
 from pants.backend.python.target_types import PythonSourceTarget
 from pants.build_graph.address import Address
@@ -7,13 +8,18 @@ from pants.core.goals.lint import LintResult, LintResults
 from pants.engine.rules import QueryRule
 from pants.engine.target import Target
 from pants.testutil.rule_runner import RuleRunner
-
+from pants.core.util_rules import config_files
+from pants.backend.python import target_types_rules
 
 @pytest.fixture
 def rule_runner() -> RuleRunner:
     return RuleRunner(
         target_types=[PythonSourceTarget],
-        rules=[QueryRule(LintResults, [ImportLinterRequest])],
+        rules=[*importlinter_rules(),
+               *target_types_rules.rules(),
+               *config_files.rules(),
+            QueryRule(LintResults, [ImportLinterRequest]),
+               ],
     )
 
 
