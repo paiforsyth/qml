@@ -82,3 +82,9 @@ We can also remove the `setup_py_commands` field from `helloworld/util/BUILD` to
 ```
 ./pants run qml/tools/run_pur.py
 ```
+
+## Troubleshooting
+1. An out of date constraints.txt file can cause obscure errors.  Try
+```
+build-support/generate_constraints.sh
+```
