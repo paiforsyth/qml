@@ -11,5 +11,5 @@ updates:
       interval: daily
     open-pull-requests-limit: 5
     ignore:
-      - dependency_name: "setuptools"
-      - dependency_name: "types-setuptools"
+      - dependency-name: "setuptools"
+      - dependency-name: "types-setuptools"
