@@ -4,7 +4,7 @@ attrs==21.2.0
 certifi==2021.10.8
 charset-normalizer==2.0.9
 click==7.1.2
-fasteners==0.16
+fasteners==0.16.3
 humbug==0.2.6
 idna==3.3
 ijson==3.1.4
