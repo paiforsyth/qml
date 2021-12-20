@@ -1,6 +1,6 @@
 from importlinter_backend.subsystem import ImportLinterFieldSet
 from pants.backend.python.util_rules import pex_from_targets
-from pants.core.goals.lint import LintRequest, LintResults, LintResult
+from pants.core.goals.lint import LintRequest, LintResult, LintResults
 from pants.engine.rules import collect_rules, rule
 from pants.engine.unions import UnionRule
 
@@ -24,4 +24,6 @@ def rules():
 async def run_importlinter(
     request: ImportLinterRequest,
 ) -> LintResults:
-    return LintResults([LintResult(exit_code=0, stdout="",stderr="")],linter_name="importlinter")
+    return LintResults(
+        [LintResult(exit_code=0, stdout="", stderr="")], linter_name="importlinter"
+    )
