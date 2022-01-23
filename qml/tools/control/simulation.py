@@ -1,7 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import Any, Generic, Sequence, TypeVar
-
-Array = Any
+from typing import Generic, Sequence, TypeVar
 
 S = TypeVar("S")
 C = TypeVar("C")

@@ -45,6 +45,7 @@ chmod +x ../ide_venv/bin/activate
 ./pants test helloworld/util:test  # Run all the tests in this target.
 ./pants test helloworld/util/lang_test.py  # Run just the tests in this file.
 ./pants test helloworld/util/lang_test.py -- -k test_language_translator  # Run just this one test.
+./pants test --test-debug :: # Run all tests sequentially, so tht breakpoints can be hit
 ```
 
 ## Create a PEX binary
@@ -83,11 +84,11 @@ We can also remove the `setup_py_commands` field from `helloworld/util/BUILD` to
 ./pants count-loc '**/*'
 ```
 
-## Update requirements using pur
+## Nuke local cache if it is large
+```
+./nuke_cache_if_too_big.sh
+```
 
-```
-./pants run qml/tools/run_pur.py
-```
 
 ## Troubleshooting
 1. An out of date constraints.txt file can cause obscure errors.  Try
