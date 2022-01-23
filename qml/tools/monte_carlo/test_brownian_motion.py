@@ -14,7 +14,7 @@ from qml.tools.monte_carlo import brownian_motion
     mean_1=st.floats(min_value=-10, max_value=-10),
     mean_2=st.floats(min_value=-10, max_value=-10),
     corr=st.floats(min_value=-0.9, max_value=0.9),
-    num_steps=st.integers(min_value=5, max_value=10),
+    num_steps=st.integers(min_value=1, max_value=10),
     final_time=st.floats(min_value=0.1, max_value=1.0),
     var_1=st.floats(min_value=0.1, max_value=1.0),
 )
