@@ -39,3 +39,4 @@ requirement_constraints = "constraints.txt"
 #  problematic system Pythons. See
 #  https://www.pantsbuild.org/docs/python-interpreter-compatibility#changing-the-interpreter-search-path.
 interpreter_search_paths = ["<PATH>", "<PYENV>"]
+tailor_ignore_solitary_init_files = false

@@ -55,7 +55,7 @@ def test_mean_invariant_to_steps(
         num_paths=paths,
         mu=jnp.array([mean_1, mean_2]),
         sigma=jnp.array([math.sqrt(var_1), 1.0]),
-        final_time=final_time,
+        final_time=final_time * jnp.ones((paths,)),
         steps=num_steps,
         key=key,
         C=C,

@@ -30,6 +30,8 @@ jobs:
           ~/.cache/pants/lmdb_store
           ~/.cache/pants/named_caches
         key: ${{ runner.os }}-
+    - name: nuke_cache_if_big
+      run: ./nuke_cache_if_too_big.sh
     - name: Setup Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2.3.1
       with:
@@ -41,7 +43,7 @@ jobs:
       run: ./pants tailor --check update-build-files --check
     - name: Lint and typecheck
       run: |
-        ./pants lint typecheck ::
+        ./pants lint check ::
     - name: Test
       run: |
         ./pants test ::
