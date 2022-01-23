@@ -12,6 +12,12 @@ pre-commit install
 gen_env.sh
 ```
 
+Activate it using
+```
+chmod +x ../ide_venv/bin/activate
+../ide_venv/bin/activate
+```
+
 ## List targets
 
 ```
