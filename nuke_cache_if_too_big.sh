@@ -14,3 +14,5 @@ nuke_if_too_big ~/.cache/pants/named_caches 2048
 
 echo "Contents of setup cache:"
 ls -l /home/runner/.cache/pants/setup/
+echo "Contents of linux cache"
+ls -l /home/runner/.cache/pants/setup/bootstrap-Linux-x86_64
