@@ -7,8 +7,10 @@ function nuke_if_too_big() {
     rm -rf ${path}
   fi
 }
-nuke_if_too_big ~/.cache/pants 1
 
 nuke_if_too_big ~/.cache/pants/lmdb_store 2048
 nuke_if_too_big ~/.cache/pants/setup 768
 nuke_if_too_big ~/.cache/pants/named_caches 2048
+
+echo "Contents of setup cache:"
+ls -l /home/runner/.cache/pants/setup/
