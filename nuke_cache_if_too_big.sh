@@ -17,4 +17,4 @@ ls -l /home/runner/.cache/pants/setup/
 echo "Contents of linux cache"
 ls -l /home/runner/.cache/pants/setup/bootstrap-Linux-x86_64
 echo "contents of python cache"
-ls -l /home/runner/.cache/pants/setup/bootstrap-Linux-x86_64/2.8.0_py39
+ls -l /home/runner/.cache/pants/setup/bootstrap-Linux-x86_64/pants.eTLSta/install
