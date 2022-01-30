@@ -18,3 +18,5 @@ echo "Contents of linux cache"
 ls -l /home/runner/.cache/pants/setup/bootstrap-Linux-x86_64
 echo "contents of python cache"
 ls -l /home/runner/.cache/pants/setup/bootstrap-Linux-x86_64/pants.eTLSta/install
+echo "contents of python cache bin"
+ls -l /home/runner/.cache/pants/setup/bootstrap-Linux-x86_64/pants.eTLSta/install/bin
