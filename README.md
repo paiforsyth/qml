@@ -1,10 +1,5 @@
 ![build_status](https://github.com/paiforsyth/qml/actions/workflows/pants.yaml/badge.svg)
 
-## Install pre-commit
-
-```
-pre-commit install
-```
 
 ## Create virtual environment for use with IDEs (for example, Pycharm)
 
@@ -15,7 +10,7 @@ gen_env.sh
 Activate it using
 ```
 chmod +x ../ide_venv/bin/activate
-../ide_venv/bin/activate
+source ../ide_venv/bin/activate
 ```
 
 ## List targets
