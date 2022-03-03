@@ -10,6 +10,6 @@ pyupgrade==2.31.0
 jax[cpu]==0.2.27
 hypothesis==6.36.0
 scipy==1.7.3
-xarray==0.20.2
+xarray==2022.3.0
 plotly==5.5.0
 attrs==21.4.0
